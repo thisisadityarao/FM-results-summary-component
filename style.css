@@ -141,15 +141,18 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  justify-content: space-between;
   min-width: 50%;
   max-width: 100%;
   flex-grow: 1;
   flex-basis: calc(640px * 999 - 100% * 999);
 }
 
-.summary > * + * {
+.summary__items {
+  padding-left: 0;
+}
+
+.summary__items > * + * {
   margin-block-start: var(--space-s);
 }
 
@@ -168,7 +171,7 @@ body {
 }
 
 .summary h2 {
-  font-size: clamp(1.35rem, 1.15rem + 0.45vi, 1.5rem);
+  font-size: clamp(1.35rem, 1.15rem + 0.45vi, 1.25rem);
   letter-spacing: -0.01rem;
 }
 
@@ -219,31 +222,37 @@ body {
 
 button.button {
   border: none;
-  background-color: transparent;
   font-family: inherit;
-  padding: 0;
   cursor: pointer;
+  appearance: none;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   background-color: var(--dark-gray-blue);
   color: var(--pale-blue);
+
   padding: 0.8em;
   border-radius: 8em;
   margin-block-start: var(--space-m);
   min-width: 10ch;
   min-height: 44px;
-  transition: 220ms all ease-in-out;
+  transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
 button.button:hover,
-button.button:active {
+button.button:focus {
   background: linear-gradient(var(--gradient-bg-one), var(--gradient-bg-two));
 }
-@media screen and (-ms-high-contrast: active) {
-  button.button {
-    border: 2px solid currentcolor;
-  }
+
+button.button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button.button:active {
+  transform: scale(0.99);
 }
 
 /*** Styles for screen width > 640px ***/
