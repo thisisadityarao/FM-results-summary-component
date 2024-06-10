@@ -29,50 +29,53 @@
 
 <body>
   <main>
-    <section>
-      <p>Your Result</p>
-      <div>
-        <span>76</span>
-        <span>of 100</span>
-      </div>
-      <h2>Great</h2>
-      <p>You scored higher than 65% of the people who have taken these tests.
-      </p>
-    </section>
-    <section>
-      <h2>Summary</h2>
-      <div>
-        <img src="" alt="">
-        <span>Reaction</span>
-        <span><strong>80</strong>/ 100</span>
-      </div>
-      <div>
-        <img src="" alt="">
-        <span>Memory</span>
-        <span><strong>92</strong>/ 100</span>
-      </div>
-      <div>
-        <img src="" alt="">
-        <span>Verbal</span>
-        <span><strong>61</strong>/ 100</span>
-      </div>
-      <div>
-        <img src="" alt="">
-        <span>Visual</span>
-        <span><strong>72</strong>/ 100</span>
-      </div>
-      <button>Continue</button>
-    </section>
+    <div class="component">
+
+      <section class="result">
+        <p>Your Result</p>
+        <div class="result__circle">
+          <span class="result__score">76</span>
+          <span class="result__total">of 100</span>
+        </div>
+        <h2>Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+
+      <section class="summary">
+        <h2>Summary</h2>
+        <div class="summary__item1">
+          <img src="./assets/images/icon-reaction.svg" alt="">
+          <span class="summary__name1">Reaction</span>
+          <span class="summary__score"><strong>80 &nbsp;</strong>/ 100</span>
+        </div>
+        <div class="summary__item2">
+          <img src="./assets/images/icon-memory.svg" alt="">
+          <span class="summary__name2">Memory</span>
+          <span class="summary__score"><strong>92 &nbsp;</strong>/ 100</span>
+        </div>
+        <div class="summary__item3">
+          <img src="./assets/images/icon-verbal.svg" alt="">
+          <span class="summary__name3">Verbal</span>
+          <span class="summary__score"><strong>61 &nbsp;</strong>/ 100</span>
+        </div>
+        <div class="summary__item4">
+          <img src="./assets/images/icon-visual.svg" alt="">
+          <span class="summary__name4">Visual</span>
+          <span class="summary__score"><strong>72 &nbsp;</strong>/ 100</span>
+        </div>
+        <button type="button" class="button">Continue</button>
+      </section>
+    </div>
   </main>
 
-  <!--
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Aditya Rao</a>.
     </div>
   </footer>
-  -->
+
 </body>
 
 </html>
